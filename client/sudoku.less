@@ -1,0 +1,35 @@
+
+* { box-sizing: border-box; }
+
+.puzzle {
+  display: table;
+  border-collapse: collapse;
+  .row {
+    display: table-row;
+    .cell {
+      cursor: pointer;
+      font-size: 36px;
+      line-height: 40px;
+      @SQUARE: 45px;
+      width: @SQUARE;
+      max-width: @SQUARE;
+      height: @SQUARE;
+      display: table-cell;
+      border: 1px solid black;
+      text-align: center;
+      vertical-align: middle;
+      &.cell-unique {
+        color: #3f3;
+      }
+      &.cell-multiple {
+        padding: 0;
+        font-size: 12px;
+        line-height: 1;
+        color: #999;
+      }
+      &.cell-bad {
+        background: #fcc;
+      }
+    }
+  }
+}

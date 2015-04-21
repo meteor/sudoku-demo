@@ -1,0 +1,26 @@
+<head>
+  <title>sudoku</title>
+</head>
+
+<body>
+  <h1>Sudoku!</h1>
+
+  <p>Click on a square to increment the number.  Shift-click to clear.</p>
+  
+  <div class="puzzle">
+    {{#each puzzle}}
+      <div class="row">
+        {{#each this}}
+          <div class="cell cell-{{cellType}}">
+            {{cellContent}}
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+
+  <p>Green numbers indicate a unique value.  Red squares indicate no valid value.
+    Small gray numbers show multiple possible values.</p>
+  <p>All solving is done in the browser in pure JavaScript using Logic Solver.</p>
+  
+</body>
